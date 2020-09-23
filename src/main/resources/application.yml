@@ -8,6 +8,7 @@ spring:
     # datasource-dev：数据库开发配置
     # log-dev：日志开发配置
     # server-dev：服务器开发配置
+    # quartz-dev：定时器开发配置
     active:
       - datasource-dev
       - log-dev
