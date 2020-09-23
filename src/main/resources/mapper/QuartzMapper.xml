@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.xuxiaowei.mapper.QuartzMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.com.xuxiaowei.entity.Quartz">
+        <id column="quartz_id" property="quartzId"/>
+        <result column="remark" property="remark"/>
+        <result column="create_username" property="createUsername"/>
+        <result column="update_username" property="updateUsername"/>
+        <result column="create_ip" property="createIp"/>
+        <result column="update_ip" property="updateIp"/>
+        <result column="create_date" property="createDate"/>
+        <result column="update_date" property="updateDate"/>
+        <result column="deleted" property="deleted"/>
+        <result column="quartz_name" property="quartzName"/>
+        <result column="quartz_description" property="quartzDescription"/>
+        <result column="quartz_cron_expression" property="quartzCronExpression"/>
+        <result column="quartz_bean_class" property="quartzBeanClass"/>
+        <result column="quartz_status" property="quartzStatus"/>
+        <result column="quartz_group" property="quartzGroup"/>
+    </resultMap>
+
+</mapper>
