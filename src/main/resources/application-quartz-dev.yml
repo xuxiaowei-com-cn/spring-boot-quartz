@@ -2,7 +2,7 @@
 # 定时器 配置
 spring:
   quartz:
-    # 定时器作业存储类型。
+    # 默认值：MEMORY，定时器作业存储类型。
     job-store-type: jdbc
     # 其他Quartz调度性能。
     properties:
