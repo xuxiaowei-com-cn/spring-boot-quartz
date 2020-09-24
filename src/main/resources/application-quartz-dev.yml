@@ -107,29 +107,29 @@ spring:
             # 数字越大，触发触发器的批量采集越有可能一次选择并触发1个以上的触发器-代价是无法精确遵守触发时间表（触发器可能会提前触发此数量））。
             # 在调度程序具有大量需要同时或接近同时触发的触发器的情况下，这可能是有用的（出于性能考虑）。
             batchTriggerAcquisitionFireAheadTimeWindow:
-            threadPool:
-              # 是您要使用的ThreadPool实现的名称。
-              # Quartz附带的线程池是“org.quartz.simpl.SimpleThreadPool”，并且应该满足几乎每个用户的需求。
-              # 它的行为非常简单，并且经过了很好的测试。
-              # 它提供了一个固定大小的线程池，这些线程池“活跃”了调度程序的生命周期。
-              class: org.quartz.simpl.SimpleThreadPool
-              # 可以是任何正整数，尽管您应该意识到只有1到100之间的数字是非常实用的。
-              # 这是可用于并发执行作业的线程数。
-              # 如果您每天只有少量工作要执行几次，那么一个线程就足够了！如果您有成千上万的工作，每分钟触发许多工作，那么您可能希望线程数更像50或100（这在很大程度上取决于您工作执行的工作性质以及系统资源！）。
-              threadCount: 10
-              # 可以是Thread.MIN_PRIORITY（为1）和Thread.MAX_PRIORITY（为10）之间的任何整数。
-              # 默认值为Thread.NORM_PRIORITY（5）。
-              threadPriority: 5
-              # 可以设置为“true”以将池中的线程创建为守护程序线程。
-              # 默认值为“false”。
-              # 另请参见ConfigMain org.quartz.scheduler.makeSchedulerThreadDaemon属性。
-              makeThreadsDaemons:
-              # 可以为“true”或“false”，默认为true。
-              threadsInheritGroupOfInitializingThread:
-              # 可以为“true”或“false”，默认为false。
-              threadsInheritContextClassLoaderOfInitializingThread:
-              # 工作池中线程名称的前缀-将附加一个数字。
-              threadNamePrefix:
+          threadPool:
+            # 是您要使用的ThreadPool实现的名称。
+            # Quartz附带的线程池是“org.quartz.simpl.SimpleThreadPool”，并且应该满足几乎每个用户的需求。
+            # 它的行为非常简单，并且经过了很好的测试。
+            # 它提供了一个固定大小的线程池，这些线程池“活跃”了调度程序的生命周期。
+            class: org.quartz.simpl.SimpleThreadPool
+            # 可以是任何正整数，尽管您应该意识到只有1到100之间的数字是非常实用的。
+            # 这是可用于并发执行作业的线程数。
+            # 如果您每天只有少量工作要执行几次，那么一个线程就足够了！如果您有成千上万的工作，每分钟触发许多工作，那么您可能希望线程数更像50或100（这在很大程度上取决于您工作执行的工作性质以及系统资源！）。
+            threadCount: 10
+            # 可以是Thread.MIN_PRIORITY（为1）和Thread.MAX_PRIORITY（为10）之间的任何整数。
+            # 默认值为Thread.NORM_PRIORITY（5）。
+            threadPriority: 5
+            # 可以设置为“true”以将池中的线程创建为守护程序线程。
+            # 默认值为“false”。
+            # 另请参见ConfigMain org.quartz.scheduler.makeSchedulerThreadDaemon属性。
+            makeThreadsDaemons:
+            # 可以为“true”或“false”，默认为true。
+            threadsInheritGroupOfInitializingThread:
+            # 可以为“true”或“false”，默认为false。
+            threadsInheritContextClassLoaderOfInitializingThread:
+            # 工作池中线程名称的前缀-将附加一个数字。
+            threadNamePrefix:
         context:
           key:
             # 表示将以字符串形式放置在“调度程序上下文”中的名称/值对。（请参阅Scheduler.getContext（））。
