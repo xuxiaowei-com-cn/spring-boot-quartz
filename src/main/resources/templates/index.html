@@ -9,15 +9,27 @@
 </head>
 <body>
 
+<div id="LAY_APP"></div>
+
 <script type="text/javascript" th:src="@{/layui-v2.5.6/layui.js}"></script>
 
 <script th:inline="javascript" type="text/javascript">
-    layui.use(['layer', 'form'], function () {
+    layui.config({
+        base: 'js',
+        version: '0.0.1'
+    }).extend({
+        index: '/index'
+    }).use(['layer', 'index'], function () {
         const $ = layui.$,
             $body = $('body'),
+            index = layui.index,
             layer = layui.layer;
 
-        layer.msg('Hello，欢迎使用 quartz !');
+        let layApp = document.getElementById("LAY_APP");
+
+
+        index.hello()
+
     });
 </script>
 
