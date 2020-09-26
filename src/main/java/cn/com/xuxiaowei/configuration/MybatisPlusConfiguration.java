@@ -1,6 +1,6 @@
 package cn.com.xuxiaowei.configuration;
 
-import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;
+import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -27,8 +27,8 @@ public class MybatisPlusConfiguration {
      * @return 分页拦截器
      */
     @Bean
-    public PaginationInnerInterceptor paginationInnerInterceptor() {
-        return new PaginationInnerInterceptor();
+    public PaginationInterceptor paginationInterceptor() {
+        return new PaginationInterceptor();
     }
 
 }
