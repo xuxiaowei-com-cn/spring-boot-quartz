@@ -23,7 +23,9 @@ layui.define(['layer'], function (exports) {
             $(otherNav).removeClass(thisClass) // 移除 this
             $(thisNav).addClass(thisClass) // 添加 this
             $.get(currentHash).done(function (data) { // 请求 hash
-                $(target).html(data) // 页面显示
+                // $(target).html(data) // 页面显示
+            }).complete(function (data) {
+                $(target).html(data.responseText) // 页面显示
             })
         }
 
