@@ -58,12 +58,13 @@
 
         });
 
-        const currentHash = window.location.hash.slice(1) || 'home'; // 文档就绪后获取 当前 hash
+        let currentHash = window.location.hash.slice(1) || '/home'; // 文档就绪后获取 当前 hash
+        currentHash = currentHash === '/' ? '/home' : currentHash; // 不使用主页
         // 文档就绪后设置 默认 hash
         // 文档就绪后设置 要移除 this 的 hash 对应的 nav
         // 文档就绪后设置 要添加 this 的 hash 对应的 nav
         // 文档就绪后设置 要添加 this 的 class
-        index.showNav("#LAY_APP", 'home', '#layui-nav .layui-nav-item', $("a[href='#" + currentHash + "']")[0].parentNode, 'layui-this');
+        index.showNav("#LAY_APP", '/home', '#layui-nav .layui-nav-item', $("a[href='#" + currentHash + "']")[0].parentNode, 'layui-this');
 
         index.hello();
 

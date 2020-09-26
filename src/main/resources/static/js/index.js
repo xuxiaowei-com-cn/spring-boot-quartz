@@ -18,7 +18,8 @@ layui.define(['layer'], function (exports) {
          * @param forceHash 强制使用 hash
          */
         showNav: function (target, defaultHash, otherNav, thisNav, thisClass, forceHash) {
-            const currentHash = forceHash ? forceHash : (window.location.hash.slice(1) || defaultHash || '/'); // 当前 hash
+            let currentHash = forceHash ? forceHash : (window.location.hash.slice(1) || defaultHash || '/'); // 当前 hash
+            currentHash = currentHash === '/' ? '/home' : currentHash; // 不使用主页
             thisClass = thisClass || 'nav-this' // this a class
             $(otherNav).removeClass(thisClass) // 移除 this
             $(thisNav).addClass(thisClass) // 添加 this
