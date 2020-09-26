@@ -45,8 +45,8 @@
             // layer.msg(elem.text());
 
             // 导航栏点击时
-            // 不需要自己切换当前选中的 hash 对应的 nav
-            index.showNav("#LAY_APP");
+            // 由于执行顺序的原因，使用强制 hash
+            index.showNav("#LAY_APP", null, null, null, null, elem.context.hash.slice(1));
 
         });
 
