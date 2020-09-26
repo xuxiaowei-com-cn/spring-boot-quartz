@@ -39,10 +39,11 @@
         version: '0.0.1'
     }).extend({
         index: '/index'
-    }).use(['element', 'index', 'layer'], function () {
+    }).use(['element', 'table', 'index', 'layer'], function () {
         const $ = layui.$,
             $body = $('body'),
             element = layui.element,
+            table = layui.table,
             index = layui.index,
             layer = layui.layer;
 
