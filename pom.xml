@@ -33,6 +33,9 @@
         <!-- https://mvnrepository.com/artifact/jakarta.validation/jakarta.validation-api -->
         <jakarta.validation-api.version>3.0.0</jakarta.validation-api.version>
 
+        <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+        <guava.version>29.0-jre</guava.version>
+
     </properties>
 
     <dependencies>
@@ -77,6 +80,13 @@
             <groupId>jakarta.validation</groupId>
             <artifactId>jakarta.validation-api</artifactId>
             <version>${jakarta.validation-api.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
         </dependency>
 
         <dependency>
