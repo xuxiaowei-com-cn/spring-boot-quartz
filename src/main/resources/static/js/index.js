@@ -15,9 +15,10 @@ layui.define(['layer'], function (exports) {
          * @param otherNav 其他导航栏，不为空
          * @param thisNav 当前导航栏，不为空
          * @param thisClass 当前 class，默认值：nav-this，可为空
+         * @param forceHash 强制使用 hash
          */
-        showNav: function (target, defaultHash, otherNav, thisNav, thisClass) {
-            const currentHash = window.location.hash.slice(1) || defaultHash || '/'; // 当前 hash
+        showNav: function (target, defaultHash, otherNav, thisNav, thisClass, forceHash) {
+            const currentHash = forceHash ? forceHash : (window.location.hash.slice(1) || defaultHash || '/'); // 当前 hash
             thisClass = thisClass || 'nav-this' // this a class
             $(otherNav).removeClass(thisClass) // 移除 this
             $(thisNav).addClass(thisClass) // 添加 this
