@@ -13,18 +13,18 @@
 <div class="layui-container">
 
     <ul class="layui-nav" id="layui-nav" lay-filter="layui-nav-filter">
-        <li class="layui-nav-item"><a href="#/home">首页</a></li>
-        <!--<li class="layui-nav-item"><a href="#/qrtz-blob-triggers">qrtz-blob-triggers</a></li>-->
-        <!--<li class="layui-nav-item"><a href="#/qrtz-calendars">qrtz-calendars</a></li>-->
-        <!--<li class="layui-nav-item"><a href="#/qrtz-cron-triggers">qrtz-cron-triggers</a></li>-->
-        <!--<li class="layui-nav-item"><a href="#/qrtz-fired-triggers">qrtz-fired-triggers</a></li>-->
-        <!--<li class="layui-nav-item"><a href="#/qrtz-job-details">qrtz-job-details</a></li>-->
-        <li class="layui-nav-item"><a href="#/qrtz-locks">定时器锁</a></li>
-        <!--<li class="layui-nav-item"><a href="#/qrtz-paused-trigger-grps">qrtz-paused-trigger-grps</a></li>-->
-        <li class="layui-nav-item"><a href="#/qrtz-scheduler-state">定时器状态</a></li>
-        <!--<li class="layui-nav-item"><a href="#/qrtz-simple-triggers">qrtz-simple-triggers</a></li>-->
-        <!--<li class="layui-nav-item"><a href="#/qrtz-simprop-triggers">qrtz-simprop-triggers</a></li>-->
-        <!--<li class="layui-nav-item"><a href="#/qrtz-triggers">qrtz-triggers</a></li>-->
+        <li class="layui-nav-item"><a th:href="@{#/home}">首页</a></li>
+        <li class="layui-nav-item"><a th:href="@{#/qrtz-blob-triggers}">blob触发器</a></li>
+        <li class="layui-nav-item"><a th:href="@{#/qrtz-calendars}">日历</a></li>
+        <li class="layui-nav-item"><a th:href="@{#/qrtz-cron-triggers}">cron触发器</a></li>
+        <li class="layui-nav-item"><a th:href="@{#/qrtz-fired-triggers}">fired-triggers</a></li>
+        <li class="layui-nav-item"><a th:href="@{#/qrtz-job-details}">qrtz-job-details</a></li>
+        <li class="layui-nav-item"><a th:href="@{#/qrtz-locks}">定时器锁</a></li>
+        <li class="layui-nav-item"><a th:href="@{#/qrtz-paused-trigger-grps}">qrtz-paused-trigger-grps</a></li>
+        <li class="layui-nav-item"><a th:href="@{#/qrtz-scheduler-state}">定时器状态</a></li>
+        <li class="layui-nav-item"><a th:href="@{#/qrtz-simple-triggers}">qrtz-simple-triggers</a></li>
+        <li class="layui-nav-item"><a th:href="@{#/qrtz-simprop-triggers}">qrtz-simprop-triggers</a></li>
+        <li class="layui-nav-item"><a th:href="@{#/qrtz-triggers}">触发器</a></li>
     </ul>
 
     <div id="LAY_APP"></div>
