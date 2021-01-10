@@ -22,15 +22,24 @@ public class QrtzFiredTriggers implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * 调度程序名称
+     */
     @TableField("SCHED_NAME")
     private String schedName;
 
     @TableField("ENTRY_ID")
     private String entryId;
 
+    /**
+     * 触发器名称
+     */
     @TableField("TRIGGER_NAME")
     private String triggerName;
 
+    /**
+     * 触发器组
+     */
     @TableField("TRIGGER_GROUP")
     private String triggerGroup;
 
@@ -49,15 +58,27 @@ public class QrtzFiredTriggers implements Serializable {
     @TableField("STATE")
     private String state;
 
+    /**
+     * 作业名称
+     */
     @TableField("JOB_NAME")
     private String jobName;
 
+    /**
+     * 作业组
+     */
     @TableField("JOB_GROUP")
     private String jobGroup;
 
+    /**
+     * 是否并发
+     */
     @TableField("IS_NONCONCURRENT")
     private String isNonconcurrent;
 
+    /**
+     * 是否恢复
+     */
     @TableField("REQUESTS_RECOVERY")
     private String requestsRecovery;
 
