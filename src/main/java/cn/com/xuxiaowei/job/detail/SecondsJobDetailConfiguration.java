@@ -13,36 +13,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package cn.com.xuxiaowei.job;
+package cn.com.xuxiaowei.job.detail;
 
+import cn.com.xuxiaowei.job.Every5SecondsQuartzJob;
 import lombok.extern.slf4j.Slf4j;
-import org.quartz.JobExecutionContext;
-import org.quartz.JobExecutionException;
-import org.quartz.JobKey;
-import org.quartz.TriggerKey;
+import org.quartz.JobBuilder;
+import org.quartz.JobDetail;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.scheduling.quartz.QuartzJobBean;
 
 /**
- * 每5秒执行一次作业
+ * 秒级 作业详情 配置
  *
  * @author xuxiaowei
  * @since 0.0.1
  */
 @Slf4j
 @Configuration
-public class Every5SecondsQuartzJob extends QuartzJobBean {
+public class SecondsJobDetailConfiguration {
 
-    public static final JobKey JOB_KEY = new JobKey("job_every_5_second", "job_group_second");
-
-    public static final TriggerKey TRIGGER_KEY = new TriggerKey("trigger_every_5_second", "trigger_group_second");
-
-    @Override
-    protected void executeInternal(JobExecutionContext context) throws JobExecutionException {
-        log.info("每5秒执行一次作业 开始");
-
-
-        log.info("每5秒执行一次作业 结束");
+    @Bean
+    public JobDetail every5SecondsJobDetail() {
+        return JobBuilder.newJob(Every5SecondsQuartzJob.class)
+                .withIdentity(Every5SecondsQuartzJob.JOB_KEY)
+                .withDescription("每5秒执行一次作业的详情")
+                .storeDurably()
+                .build();
     }
 
 }
