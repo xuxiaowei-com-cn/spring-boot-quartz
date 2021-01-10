@@ -36,6 +36,8 @@ public class SecondsJobDetailConfiguration {
     public JobDetail every5SecondsJobDetail() {
         return JobBuilder.newJob(Every5SecondsQuartzJob.class)
                 .withIdentity(Every5SecondsQuartzJob.JOB_KEY)
+                // 请求恢复
+                .requestRecovery()
                 .withDescription("每5秒执行一次作业的详情")
                 .storeDurably()
                 .build();
