@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 /**
  * <p>
- *  服务实现类
+ * 作业详情表 服务实现类
  * </p>
  *
  * @author 徐晓伟

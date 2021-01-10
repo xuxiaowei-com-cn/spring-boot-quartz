@@ -5,7 +5,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
  * <p>
- *  服务类
+ * 作业详情表 服务类
  * </p>
  *
  * @author 徐晓伟

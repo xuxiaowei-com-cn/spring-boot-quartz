@@ -9,7 +9,7 @@ import java.io.Serializable;
 
 /**
  * <p>
- *
+ * 作业详情表
  * </p>
  *
  * @author 徐晓伟

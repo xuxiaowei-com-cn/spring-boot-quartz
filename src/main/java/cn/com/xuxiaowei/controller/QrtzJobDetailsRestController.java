@@ -11,7 +11,7 @@ import java.util.Map;
 
 /**
  * <p>
- * 前端控制器
+ * 作业详情表 前端控制器
  * </p>
  *
  * @author 徐晓伟
