@@ -22,18 +22,33 @@ public class QrtzCronTriggers implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * 调度程序名称
+     */
     @TableField("SCHED_NAME")
     private String schedName;
 
+    /**
+     * 触发器名称
+     */
     @TableField("TRIGGER_NAME")
     private String triggerName;
 
+    /**
+     * 触发器组
+     */
     @TableField("TRIGGER_GROUP")
     private String triggerGroup;
 
+    /**
+     * cron 表达式
+     */
     @TableField("CRON_EXPRESSION")
     private String cronExpression;
 
+    /**
+     * 时区
+     */
     @TableField("TIME_ZONE_ID")
     private String timeZoneId;
 
