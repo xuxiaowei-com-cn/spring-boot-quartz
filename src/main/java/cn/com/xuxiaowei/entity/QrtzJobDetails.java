@@ -22,30 +22,51 @@ public class QrtzJobDetails implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * 调度程序名称
+     */
     @TableField("SCHED_NAME")
     private String schedName;
 
+    /**
+     * 作业名称
+     */
     @TableField("JOB_NAME")
     private String jobName;
 
+    /**
+     * 作业组
+     */
     @TableField("JOB_GROUP")
     private String jobGroup;
 
+    /**
+     * 作业详情注释
+     */
     @TableField("DESCRIPTION")
     private String description;
 
+    /**
+     * 作业 class 名称
+     */
     @TableField("JOB_CLASS_NAME")
     private String jobClassName;
 
     @TableField("IS_DURABLE")
     private String isDurable;
 
+    /**
+     * 是否并发
+     */
     @TableField("IS_NONCONCURRENT")
     private String isNonconcurrent;
 
     @TableField("IS_UPDATE_DATA")
     private String isUpdateData;
 
+    /**
+     * 是否恢复
+     */
     @TableField("REQUESTS_RECOVERY")
     private String requestsRecovery;
 
