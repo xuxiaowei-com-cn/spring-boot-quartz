@@ -9,7 +9,7 @@ import java.io.Serializable;
 
 /**
  * <p>
- *
+ * 触发器表
  * </p>
  *
  * @author 徐晓伟
