@@ -15,8 +15,6 @@
  */
 package cn.com.xuxiaowei.util;
 
-import cn.com.xuxiaowei.enums.CodeList;
-
 import java.nio.charset.Charset;
 
 /**
@@ -57,16 +55,6 @@ public final class Constants {
     public static final String CODE = "code";
 
     /**
-     * 正确响应 Code
-     */
-    public static final String CODE_OK = CodeList.OK.code;
-
-    /**
-     * 错误响应 Code
-     */
-    public static final String CODE_ERR = "-1";
-
-    /**
      * 响应 Code 说明
      */
     public static final String MSG = "msg";
@@ -97,11 +85,9 @@ public final class Constants {
     public static final String REASON = "reason";
 
     /**
-     * 响应 数据 详情
-     * <p>
-     * 支付详情记录标识
+     * 点击
      */
-    public static final String DETAIL = "detail";
+    public static final String CLICK = "click";
 
     /**
      * Token
@@ -136,7 +122,7 @@ public final class Constants {
     /**
      * 支款标志前缀
      */
-    public static final String REFUND = "refund";
+    public static final String REFUND = "Refund";
 
     /**
      * 支付主记录标识
