@@ -47,7 +47,7 @@ public class QrtzCronTriggers implements Serializable {
     private String cronExpression;
 
     /**
-     * 时区
+     * 时区，如：Asia/Shanghai
      */
     @TableField("TIME_ZONE_ID")
     private String timeZoneId;
