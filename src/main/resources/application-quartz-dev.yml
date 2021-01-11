@@ -4,6 +4,10 @@ spring:
   quartz:
     # 默认值：MEMORY，定时器作业存储类型。
     job-store-type: jdbc
+    # 数据库
+    jdbc:
+      # 是否初始化表结构
+      initialize-schema: never
     # 其他Quartz调度性能。
     properties:
       # http://www.quartz-scheduler.org/documentation/2.4.0-SNAPSHOT/configuration.html
