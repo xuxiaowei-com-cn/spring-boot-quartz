@@ -16,10 +16,7 @@
 package cn.com.xuxiaowei.job;
 
 import lombok.extern.slf4j.Slf4j;
-import org.quartz.JobExecutionContext;
-import org.quartz.JobExecutionException;
-import org.quartz.JobKey;
-import org.quartz.TriggerKey;
+import org.quartz.*;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.quartz.QuartzJobBean;
 
@@ -41,6 +38,17 @@ public class Every5SecondsQuartzJob extends QuartzJobBean {
     protected void executeInternal(JobExecutionContext context) throws JobExecutionException {
         log.info("每5秒执行一次作业 开始");
 
+        JobDataMap jobDetailJobDataMap = context.getJobDetail().getJobDataMap();
+        for (String jobDetailJobDataMapKey : jobDetailJobDataMap.keySet()) {
+            Object jobDetailJobDataMapValue = jobDetailJobDataMap.get(jobDetailJobDataMapKey);
+            log.info("jobDetailJobDataMap：{} \t {}", jobDetailJobDataMapKey, jobDetailJobDataMapValue);
+        }
+
+        JobDataMap triggerJobDataMap = context.getTrigger().getJobDataMap();
+        for (String triggerJobDataMapKey : triggerJobDataMap.keySet()) {
+            Object triggerJobDataMapValue = jobDetailJobDataMap.get(triggerJobDataMapKey);
+            log.info("jobDetailJobDataMap：{} \t {}", triggerJobDataMapKey, triggerJobDataMapValue);
+        }
 
         log.info("每5秒执行一次作业 结束");
     }
