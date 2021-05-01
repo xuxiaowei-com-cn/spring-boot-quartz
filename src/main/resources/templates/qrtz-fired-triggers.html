@@ -30,9 +30,16 @@
                     {field: 'triggerName', width: 160, title: 'triggerName', sort: true},
                     {field: 'triggerGroup', width: 160, title: 'triggerGroup', sort: true},
                     {field: 'instanceName', width: 160, title: 'instanceName', sort: true},
-
-                    {field: 'firedTime', width: 160, title: 'firedTime', sort: true},
-                    {field: 'schedTime', width: 160, title: 'schedTime', sort: true},
+                    {
+                        field: 'firedTime', width: 160, title: 'firedTime', sort: true, templet: function (data) {
+                            return new Date(data.firedTime).toLocaleString();
+                        }
+                    },
+                    {
+                        field: 'schedTime', width: 160, title: 'schedTime', sort: true, templet: function (data) {
+                            return new Date(data.schedTime).toLocaleString();
+                        }
+                    },
                     {field: 'priority', width: 160, title: 'priority', sort: true},
                     {field: 'state', width: 160, title: 'state', sort: true},
                     {field: 'jobName', width: 160, title: 'jobName', sort: true},
