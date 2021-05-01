@@ -40,7 +40,7 @@ public class SecondsTriggerConfiguration {
         Date triggerStartTime = DateUtils.parse(triggerStartLocalDateTime);
 
         // 启动 100 秒后停止执行
-        LocalDateTime triggerEndLocalDateTime = now.plusSeconds(120);
+        LocalDateTime triggerEndLocalDateTime = now.plusSeconds(120 * 1000000);
         Date triggerEndTime = DateUtils.parse(triggerEndLocalDateTime);
 
         return TriggerBuilder.newTrigger()
