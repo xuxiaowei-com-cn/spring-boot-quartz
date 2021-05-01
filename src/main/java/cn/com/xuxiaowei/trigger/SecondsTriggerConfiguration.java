@@ -49,7 +49,7 @@ public class SecondsTriggerConfiguration {
                 .usingJobData("触发器Key", "触发器Value")
                 .withDescription("每5秒执行一次作业的触发器")
                 // 每5秒执行一次
-                 .withSchedule(CronScheduleBuilder.cronSchedule("*/5 * * * * ?"))
+                .withSchedule(CronScheduleBuilder.cronSchedule("*/5 * * * * ?"))
                 // 设置触发器应开始的时间-触发器此时可能触发也可能不触发-取决于为触发器配置的时间表。
                 // 但是，无论触发器的时间表如何，触发器都不会在此时间之前触发。
                 .startAt(triggerStartTime)
