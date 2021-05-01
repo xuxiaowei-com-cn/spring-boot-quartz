@@ -46,7 +46,7 @@ public class Every5SecondsQuartzJob extends QuartzJobBean {
 
         JobDataMap triggerJobDataMap = context.getTrigger().getJobDataMap();
         for (String triggerJobDataMapKey : triggerJobDataMap.keySet()) {
-            Object triggerJobDataMapValue = jobDetailJobDataMap.get(triggerJobDataMapKey);
+            Object triggerJobDataMapValue = triggerJobDataMap.get(triggerJobDataMapKey);
             log.info("jobDetailJobDataMap：{} \t {}", triggerJobDataMapKey, triggerJobDataMapValue);
         }
 
