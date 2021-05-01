@@ -33,6 +33,7 @@ public class SecondsTriggerConfiguration {
         return TriggerBuilder.newTrigger()
                 .forJob(every5SecondsJobDetail)
                 .withIdentity(Every5SecondsQuartzJob.TRIGGER_KEY)
+                .usingJobData("触发器Key", "触发器Value")
                 .withDescription("每5秒执行一次作业的触发器")
                 // 每5秒执行一次
                 .withSchedule(CronScheduleBuilder.cronSchedule("*/5 * * * * ?"))
